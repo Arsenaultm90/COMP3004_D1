@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>customerPage</class>
+ <widget class="QWidget" name="customerPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>825</width>
+    <height>655</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="logoutButton">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>10</y>
+     <width>100</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #D9534F;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #C9302C;
+}
+
+QPushButton:pressed {
+    background-color: #AC2925;
+}</string>
+   </property>
+   <property name="text">
+    <string>Logout</string>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>120</y>
+     <width>821</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="infoLayout">
+    <item>
+     <widget class="QGroupBox" name="cafeMenu">
+      <property name="title">
+       <string>Cafe Menu</string>
+      </property>
+      <widget class="QListWidget" name="menuList">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>381</width>
+         <height>441</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="qtyLabel">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>490</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Quantity :</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>490</y>
+         <width>131</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="addItemButton">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>490</y>
+         <width>100</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #2878C8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #1F65A8;
+}
+
+QPushButton:pressed {
+    background-color: #194F85;
+}</string>
+       </property>
+       <property name="text">
+        <string>Add Item</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="OrderLayout">
+      <item>
+       <widget class="QGroupBox" name="onlineOrder">
+        <property name="title">
+         <string>Online Order</string>
+        </property>
+        <widget class="QListWidget" name="orderDisplay">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>381</width>
+           <height>91</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>120</y>
+           <width>279</width>
+           <height>131</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="paymentLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="subtotalLayout">
+            <item>
+             <widget class="QLabel" name="subtotalLabel">
+              <property name="text">
+               <string>Subtotal :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="subtotalMaount">
+              <property name="text">
+               <string>$0.00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="taxLayout_3">
+            <item>
+             <widget class="QLabel" name="taxLabel">
+              <property name="text">
+               <string>Tax : 15%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="taxAmount">
+              <property name="text">
+               <string>$0.00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="finalLayout">
+            <item>
+             <widget class="QLabel" name="finalLabel">
+              <property name="text">
+               <string>Final Total :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="finalAmount">
+              <property name="text">
+               <string>$0.00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="loyaltyLayout">
+            <item>
+             <widget class="QLabel" name="loyaltyLabel">
+              <property name="text">
+               <string>Loyalty Redeemed :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="loyaltyAmount">
+              <property name="text">
+               <string>$0.00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="creditLayout">
+            <item>
+             <widget class="QLabel" name="creditLabel">
+              <property name="text">
+               <string>Credit Applied :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="creditAmount">
+              <property name="text">
+               <string>$0.00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="amountDueLayout">
+            <item>
+             <widget class="QLabel" name="dueLabel">
+              <property name="text">
+               <string>Amount Due :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="dueAmount">
+              <property name="text">
+               <string>$0.00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="orderButton">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>300</y>
+           <width>111</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #2878C8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #1F65A8;
+}
+
+QPushButton:pressed {
+    background-color: #194F85;
+}</string>
+         </property>
+         <property name="text">
+          <string>Place Order</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="previousOrdersLabel">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>350</y>
+           <width>121</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Previous Orders</string>
+         </property>
+        </widget>
+        <widget class="QListWidget" name="listWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>370</y>
+           <width>381</width>
+           <height>131</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="loyaltyPointsSpinBox">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>260</y>
+           <width>42</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="loyaltyPointAmtLabel">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>260</y>
+           <width>101</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Loyalty Points :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="creditAmtLabel">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>260</y>
+           <width>111</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Account Credit :</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="creditSpinBox">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>260</y>
+           <width>62</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="greetingLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>0</y>
+     <width>521</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Greetings, Name</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="inProgressButton">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>110</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>In Progress</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>100</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Orientation::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="orderLabel">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>60</y>
+     <width>161</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">    color: #56B8A8;
+    font-size: 20px;
+    font-weight: bold;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="statusLabel">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>80</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">    color: #B3C1B9;
+    font-size: 12px;
+    font-weight: 100px;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>501</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>271</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="accountInfoLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="emailLayout">
+       <item>
+        <widget class="QLabel" name="emailTitleLabel">
+         <property name="text">
+          <string>Email :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="emailLabel">
+         <property name="text">
+          <string>placeholder</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="phoneNumberLayout">
+       <item>
+        <widget class="QLabel" name="phoneNumberTitleLabel">
+         <property name="text">
+          <string>Phone # :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="phoneNumberLabel">
+         <property name="text">
+          <string>placeholder</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="addressLayout">
+       <item>
+        <widget class="QLabel" name="addressTitleLabel">
+         <property name="text">
+          <string>Address :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="addressLabel">
+         <property name="text">
+          <string>placeholder</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>0</y>
+      <width>191</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="accountValueLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="loyaltyNumberLayout">
+       <item>
+        <widget class="QLabel" name="loyaltyNumberTitleLabel">
+         <property name="text">
+          <string>Loyalty # :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="loyaltyNumberLabel">
+         <property name="text">
+          <string>placeholder</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="loyaltyPointsLayout">
+       <item>
+        <widget class="QLabel" name="loyaltyPointsTitleLabel">
+         <property name="text">
+          <string>Loyalty Points :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="loyaltyPointsLabel">
+         <property name="text">
+          <string>placeholder</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="accountCreditLayout">
+       <item>
+        <widget class="QLabel" name="accountCreditTitleLabel">
+         <property name="text">
+          <string>Account Credit :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="accountCreditLabel">
+         <property name="text">
+          <string>placeholder</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
